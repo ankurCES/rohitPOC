@@ -1,0 +1,18 @@
+{
+  "name": "client",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-route": "~1.4.7",
+    "angular-socket-io": "~0.7.0",
+    "semantic-ui": "~2.1.4",
+    "ngModal": "~1.2.2",
+    "font-awesome": "4.3.0",
+    "angular-bootstrap": "0.12.0",
+    "oclazyload": "~0.5.2",
+    "angular-loading-bar": "~0.7.0",
+    "angular-toggle-switch": "~1.2.1",
+    "metisMenu": "~1.1.3",
+    "angular-chart.js": "~0.5.2"
+  }
+}

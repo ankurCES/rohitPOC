@@ -1,0 +1,58 @@
+<!doctype html>
+<html ng-app="MainApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Gustavo Henrique <gustavo@gustavohenrique.net>">
+    <title>Reverse Bid</title>
+
+    <!-- build:css styles/style.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/semantic-ui/dist/semantic.css" />
+    <link rel="stylesheet" href="../bower_components/ngModal/dist/ng-modal.css" />
+    <!-- endbower -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+  </head>
+  <body>
+
+    <div ng-controller="MainCtrl" class="ui fixed inverted main menu">
+        <div class="ui main container">
+            <a ng-href="#/" class="title item">Real-Time Auction</a>
+        </div>
+    </div>
+
+    <div ng-view></div>
+
+    <script src="https://cdn.socket.io/socket.io-1.4.3.js"></script>
+    <!-- build:js script.js -->
+    <!-- bower:js -->
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+    <script src="../bower_components/angular-socket-io/socket.js"></script>
+    <script src="../bower_components/ngModal/dist/ng-modal.js"></script>
+    <script src="../bower_components/Chart.js/Chart.min.js"></script>
+    <!-- endbower -->
+    <script src="scripts/controllers/MainCtrl.js"></script>
+    <script src="scripts/controllers/AuthCtrl.js"></script>
+    <script src="scripts/controllers/DashboardCtrl.js"></script>
+    <script src="scripts/controllers/AdminDashboardCtrl.js"></script>
+
+    <script src="scripts/services/SocketService.js"></script>
+    <script src="scripts/services/EventHub.js"></script>
+
+    <script src="scripts/directives/playerstats.js"></script>
+    <script src="scripts/directives/inventory.js"></script>
+    <script src="scripts/directives/inventoryModal.js"></script>
+    <script src="scripts/directives/auction.js"></script>
+    <script src="scripts/directives/admin_auction.js"></script>
+
+    <script src="scripts/route.js"></script>
+    <script src="scripts/app.js"></script>
+    
+    <script src=".tmp/partials.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
