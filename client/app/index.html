@@ -1,6 +1,7 @@
 <!doctype html>
 <html ng-app="MainApp">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,16 +16,17 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
-  </head>
-  <body>
+</head>
 
-    <div ng-controller="MainCtrl" class="ui fixed inverted main menu">
-        <div class="ui main container">
-            <a ng-href="#/" class="title item">Real-Time Auction</a>
+<body>
+    <div class="ui inverted menu" ng-controller="MainCtrl">
+        <div class="ui container">
+            <a href="#" class="header item">Real-Time Auction
+            </a>
         </div>
     </div>
 
-    <div ng-view></div>
+    <div class="ui container" ng-view></div>
 
     <script src="https://cdn.socket.io/socket.io-1.4.3.js"></script>
     <!-- build:js script.js -->
@@ -51,8 +53,9 @@
 
     <script src="scripts/route.js"></script>
     <script src="scripts/app.js"></script>
-    
+
     <script src=".tmp/partials.js"></script>
     <!-- endbuild -->
-  </body>
+</body>
+
 </html>

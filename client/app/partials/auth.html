@@ -1,18 +1,27 @@
-<div class="ui one column center aligned page grid auth">
-   <div class="column six wide">
-        <h4 class="ui block top attached header">Login</h4>
-        <div class="ui form bottom attached fluid segment compact">
-            <div class="ui negative message hide" show-if="{{ vm.isError }}">
-                <div class="header">Authentication failed</div>
-                <p>Invalid username or password.</p>
+<div class="ui middle aligned center aligned grid">
+    <div class="eight wide column">
+        <h2 class="ui image header">
+            <div class="content">
+                Log-in to your account
             </div>
-            <div class="inline field">
-                <label class="login">Name:</label>
-                <input type="text" ng-model="vm.user.name">
+        </h2>
+        <form class="ui large form">
+            <div class="ui stacked secondary segment">
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="user icon"></i>
+                        <input type="text" name="username" ng-model="vm.user.name" placeholder="Username">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="lock icon"></i>
+                        <input type="password" name="password" ng-model="vm.user.password" placeholder="Password">
+                    </div>
+                </div>
+                <div class="ui fluid large teal submit button" ng-click="vm.enter()">Login</div>
             </div>
-            <div class="field">
-                <a class="ui button large primary" ng-click="vm.enter()">Enter</a>
-            </div>
-        </div>
-   </div>
+            <div show-if="{{vm.isError}}" class="ui error message">Invalid username or password.</div>
+        </form>
+    </div>
 </div>

@@ -1,4 +1,5 @@
-;(function (angular) {
+;
+(function(angular) {
     'use strict';
 
     var app = angular.module('directives.InventoryModal', ['ngModal']);
@@ -10,7 +11,7 @@
     app.directive('inventoryModal', InventoryModal);
     InventoryModal.$inject = ['$timeout', 'eventHub'];
 
-    function InventoryModal ($timeout, eventHub) {
+    function InventoryModal($timeout, eventHub) {
         return {
             restrict: 'E',
             template: '<modal-dialog show="vm.showModal" dialog-title=""> \
@@ -31,19 +32,19 @@
             </div> \
             </modal-dialog>',
             scope: '&',
-            link: function (scope, element, attrs) {
+            link: function(scope, element, attrs) {
                 var vm = scope.vm;
                 vm.error = false;
                 vm.cleanAndCloseModal = cleanAndCloseModal;
 
                 cleanAndCloseModal();
 
-                eventHub.scope.$on('inventory:open_auction', function (evt, item) {
+                eventHub.scope.$on('inventory:open_auction', function(evt, item) {
                     vm.showModal = true;
                     vm.selectedItem = item;
                 });
 
-                vm.startAuction = function () {
+                vm.startAuction = function() {
                     vm.data.newAuction = {
                         item: vm.selectedItem,
                         quantity: vm.quantity,
@@ -51,24 +52,23 @@
                     };
 
                     if (isValidAuction(vm.data.newAuction)) {
-                        eventHub.emit('auction: user wish to start', {data: vm.data});
-                    }
-                    else {
+                        eventHub.emit('auction: user wish to start', { data: vm.data });
+                    } else {
                         vm.error = true;
                     }
                 };
 
-                eventHub.on('auction: started', function (res) {
+                eventHub.on('auction: started', function(res) {
                     cleanAndCloseModal();
                 });
 
-                eventHub.on('auction: no auction in progress', function (res) {
+                eventHub.on('auction: no auction in progress', function(res) {
                     vm.notAvailable = true;
                     $timeout(cleanAndCloseModal, 2000);
                 });
 
 
-                function cleanAndCloseModal () {
+                function cleanAndCloseModal() {
                     vm.showModal = false;
                     vm.quantity = 1;
                     vm.minimum = 1;
@@ -76,7 +76,7 @@
                     vm.error = false;
                 }
 
-                function isValidAuction (auction) {
+                function isValidAuction(auction) {
                     return parseInt(auction.quantity) <= parseInt(auction.item.UserInventory.quantity) &&
                         parseInt(auction.minimumBid) > 0;
                 }

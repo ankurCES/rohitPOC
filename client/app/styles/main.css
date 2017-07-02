@@ -1,6 +1,6 @@
 hr {
-  border: 0;
-  border-top: 1px solid silver;
+    border: 0;
+    border-top: 1px solid silver;
 }
 
 label.login {
@@ -8,7 +8,8 @@ label.login {
     text-align: left;
 }
 
-div.ui.auth, div.ui.top.attached.menu {
+div.ui.auth,
+div.ui.top.attached.menu {
     margin-top: 40px;
 }
 
@@ -25,6 +26,10 @@ div.title.item {
 }
 
 .ng-modal-dialog {
-	width: 30%;
-	padding: 0;
+    width: 30%;
+    padding: 0;
+}
+
+.ui.stacked.segment:after {
+    position: inherit;
 }
