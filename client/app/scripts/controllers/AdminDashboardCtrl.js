@@ -1,4 +1,4 @@
-(function () {
+(function() {
     'use strict';
 
     angular
@@ -7,12 +7,16 @@
 
     AdminDashboardCtrl.$inject = ['eventHub'];
 
-    function AdminDashboardCtrl (eventHub) {
-    	var vm = this;
+    function AdminDashboardCtrl(eventHub) {
+        var vm = this;
 
-    	eventHub.scope.$on('user:authenticated', function (evt, data) {
-    		vm.data = data;
-    	});
+        eventHub.scope.$on('user:authenticated', function(evt, data) {
+            vm.data = data;
+        });
+        $('.button')
+            .popup({
+                popup: '.special.popup'
+            });
     }
 
 })();

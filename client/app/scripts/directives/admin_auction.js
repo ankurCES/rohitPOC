@@ -26,12 +26,12 @@
                         <strong>Current Auction</strong>\
                     </div>\
                     <div class="image">\
-                        <img class="ui image" src="images/{{ vm.currentAuction.item.name | lowercase }}.png">\
+                        <img class="ui image" src="images/{{vm.currentAuction.item.name | lowercase}}.png">\
                     </div>\
                     <div class="content">\
-                        <div class="header">{{ vm.currentAuction.item.name }}</div>\
+                        <div class="header">{{vm.currentAuction.item.name}}</div>\
                         <div class="meta">\
-                            <a>Quantity: {{ vm.currentAuction.quantity }}</a>\
+                            <a>Quantity: {{vm.currentAuction.quantity}}</a>\
                         </div>\
                         <div class="description ui grid">\
                             <div class="ui statistic">\
