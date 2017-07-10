@@ -52,7 +52,7 @@
                             </div>\
                         </div>\
                         </div>\
-                        <div class="extra content red" ng-show="vm.currentAuction.winner">\
+                        <div class="content" ng-show="vm.currentAuction.winner">\
                             <span>\
                                 <i class="user icon"></i>\
                                 Winner: {{ vm.currentAuction.winner.name }}\

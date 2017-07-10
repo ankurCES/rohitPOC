@@ -17,7 +17,7 @@
                                 {{ vm.data.user.coins }}\
                                 </div>\
                                 <div class="label">\
-                                Coins\
+                                <i class="money icon"></i>\
                                 </div>\
                             </div>\
                             <br>\
