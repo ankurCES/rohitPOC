@@ -13,9 +13,16 @@
         eventHub.scope.$on('user:authenticated', function(evt, data) {
             vm.data = data;
         });
-        $('.button')
+        $('.avatar')
             .popup({
-                popup: '.special.popup'
+                inline: true,
+                hoverable: true,
+                position: 'bottom left',
+                on: 'click',
+                delay: {
+                    show: 300,
+                    hide: 800
+                }
             });
     }
 

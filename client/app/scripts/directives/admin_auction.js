@@ -52,14 +52,23 @@
                             </div>\
                         </div>\
                         </div>\
-                        <div class="extra content">\
-                        <span class="right floated">\
-                            Seller: {{ vm.currentAuction.user.name }}\
-                        </span>\
-                        <span ng-show="vm.currentAuction.winner.name && vm.isReport">\
-                            <i class="user icon"></i>\
-                            Winner: {{ vm.currentAuction.winner.name }}\
-                        </span>\
+                        <div class="extra content red" ng-show="vm.currentAuction.winner">\
+                            <span>\
+                                <i class="user icon"></i>\
+                                Winner: {{ vm.currentAuction.winner.name }}\
+                            </span>\
+                            <span class="right floated">\
+                                 Bid: {{ vm.currentAuction.winningBid }}\
+                            </span>\
+                        </div>\
+                        <div class="extra content" ng-repeat="item in vm.currentAuction.bidData | limitTo:-5">\
+                            <span>\
+                                <i class="user icon"></i>\
+                                User: {{ item.user.name }}\
+                            </span>\
+                             <span class="right floated">\
+                                Bid: {{ item.bid }}\
+                            </span>\
                         </div>\
                 </div>',
             scope: '&',

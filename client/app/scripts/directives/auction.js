@@ -68,7 +68,6 @@
                     if (res.data) {
                         vm.currentAuction.bid = '';
                     }
-                    console.log(res);
                 });
 
                 eventHub.on('auction: show the countdown', function(res) {

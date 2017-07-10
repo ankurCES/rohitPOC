@@ -1,9 +1,20 @@
-<div class="ui three column stackable grid" style="margin-top:40px">
-    <div class="column">
-        <playerstats/>
-    </div>
-    <div class="column">
-        <auction/>
+<div class="ui float-right">
+    <img src="../images/elliot.jpg" class="ui avatar image">
+    <div class="ui flowing popup top left transition hidden">
+        <div class="ui center aligned">
+            <playerstats/>
+        </div>
     </div>
 </div>
+
+<div class="ui two column doubling grid container">
+    <div class="ten wide column">
+        <auction/>
+    </div>
+    <div>
+        <div ng-show="vm.showCongratulations" class="ui info message"> Congratulations! You win!
+        </div>
+    </div>
+</div>
+
 <inventory-modal/>

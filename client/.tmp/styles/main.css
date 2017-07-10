@@ -33,3 +33,7 @@ div.title.item {
 .ui.stacked.segment:after {
     position: inherit;
 }
+
+.ui.float-right {
+    float: right;
+}
